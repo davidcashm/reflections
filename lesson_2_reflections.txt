@@ -2,5 +2,8 @@ What happens when you initialize a repository?
   - It creates a .git file
 Why do you need to do it?
   - So that git will know you've started a repository.
-
+How is the staging area different from the working directory and the repository?
+   - It consists of files that are not yet committed, but closer to a commit than other changed files in the working directory
+What value do you think it offers?
+   - Lets you adjust your commits before making them
 
