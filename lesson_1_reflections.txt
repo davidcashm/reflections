@@ -1,0 +1,9 @@
+How did viewing a diff help?
+    It reduced the amount of text I had to scan
+
+How can you use the commands git log and git diff to view the history of files?
+
+git log gives the history
+git diff lets you see the difference between two commits
+
+git init starts a new git repository
