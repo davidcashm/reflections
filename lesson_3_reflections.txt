@@ -1,0 +1,4 @@
+When would you want to use a remote repository rather than keeping all your work local?
+ - Multiple contributors
+ - Allows work from any machine
+ - Backup in case computer is lost or damaged
