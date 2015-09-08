@@ -6,4 +6,36 @@ How is the staging area different from the working directory and the repository?
    - It consists of files that are not yet committed, but closer to a commit than other changed files in the working directory
 What value do you think it offers?
    - Lets you adjust your commits before making them
+How can you use the staging area to make sure you have one commit per logical change?
+   - By reviewing with git diff --staged before committing.
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+   - Prototyping
+   - Branching for release
+How do the diagrams help you visualize the branch structure?
+   - They let you see what commits went into a given branch
 
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+   - If there are no conflicts, the merge + commit are automatic
+   - The new version reflects all changes from the last common ancestor to each of the merging versions
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+   - Automatic is faster, and probably less error prone most of the time, but risks making mistakes in complicated situations
+
+git diff with no arguments diffs the working directory against the staging area.
+
+git diff --staged shows the diffs between the staging area, and the head
+
+git reset --hard throws away all changes
+
+git checkout master : Switch to head of the main branch
+
+git branch : List branches, with * next to current branch
+git branch $name : Create new branch $name.  (Still need to run "git checkout $name" to switch to it.  You can do both at once with "git checkout -b $name")
+
+git log --graph : Visualize git log as a graph
+
+git merge branch1 branch2
+
+git show - compare a commit against its parent
+
+git branch -d $name - delete the label at the head of a branch
