@@ -2,3 +2,8 @@ When would you want to use a remote repository rather than keeping all your work
  - Multiple contributors
  - Allows work from any machine
  - Backup in case computer is lost or damaged
+
+git remote : List remote repositories for the current project
+git remote add origin git@github.com:davidcashm/reflections.git
+git push origin master : Push the master commit into "origin" remote
+git pull origin master : Pull from the origin to update local master
