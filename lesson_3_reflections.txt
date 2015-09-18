@@ -3,7 +3,40 @@ When would you want to use a remote repository rather than keeping all your work
  - Allows work from any machine
  - Backup in case computer is lost or damaged
 
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+ - Avoid pulling conflicting changes from others
+ - Stability during testing
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+ - Fork: Create a new repository out of an old one on Github
+   - Useful when you want separate owners for the new and old project
+   - Irrevocable (I think).  I.e. use it when you'll never want to merge them back together
+ - Clone: Create a local copy of the repository
+   - The normal operation to work on a github repository locally
+ - Branch: Create a (possibly temporary) branch within the repository
+   - Used for different versions of the code within a repository - e.g. prototypes, stable release branches, etc.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+ - Lets you see differences between your local version and remote version, merge more gradually if desired
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+ - Email
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+ - Reasons mentioned before (prototype, etc.).  And in order to do a pull request?
+
 git remote : List remote repositories for the current project
 git remote add origin git@github.com:davidcashm/reflections.git
 git push origin master : Push the master commit into "origin" remote
 git pull origin master : Pull from the origin to update local master
+git fetch : Pull from origin, and create a new local branch called origin/master to reflect it.  Following up with "git merge master origin/master" is then equivalent to git pull
+
+How to make a pull request:
+    - Make a new branch, and commit on the new branch
+    - git push origin my-new-branch
+    - On the github website, go to the new branch, and click on pull request
+
+Typically, origin is my github repository, and "upstream" is the original repository that I forked from.
+
+git pull upstream master : to pull in the master
+
